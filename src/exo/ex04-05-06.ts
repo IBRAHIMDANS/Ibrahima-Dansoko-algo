@@ -61,7 +61,45 @@ export class LinkedList {
         return arr;
     }
 
+    deleteDouble() {
+        if (!this.head || !this.head.next) {
+            console.log('impossible linkedList empty');
+            return false;
+        }
+        let current, preview;
+        let newHead: any;
+        current = this.head;
+        newHead = {};
+        preview = current;
+        newHead[current.value] = true;
+        while (preview) {
+            const data = preview.value;
+            if (newHead[data]) {
+                current.next = preview.next;
+            } else {
+                newHead[data] = true;
+                current = preview;
+            }
+            preview = preview.next;
+        }
+    }
 
+    getLastItem(pointeur: number) {
+        let head = this.head;
+        let newHead = this.head;
+
+        for (let i = 0; i < pointeur; i++) {
+            if (!head.next) {
+                return null;
+            }
+            head = head.next;
+        }
+        while (head.next !== null) {
+            head = head.next;
+            newHead = newHead.next;
+        }
+        return newHead;
+    }
 }
 
 export class LinkedListItem {
