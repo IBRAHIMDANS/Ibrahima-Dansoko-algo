@@ -1,0 +1,20 @@
+{
+  "name": "Ibrahima-Dansoko-algo",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:IBRAHIMDANS/Ibrahima-Dansoko-algo.git",
+  "author": "ibrahima DANSOKO <ibrahima.dansoko@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=12.7.x",
+    "npm": ">=6.13.4",
+    "yarn": ">=1.19.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
