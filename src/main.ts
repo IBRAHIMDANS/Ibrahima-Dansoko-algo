@@ -15,5 +15,7 @@ linkedList.appendToTail(2);
 linkedList.appendToTail(20);
 linkedList.appendToTail(5);
 console.log(linkedList.showList()); // [ 4, 10, 2, 20, 5 ]
+linkedList.deleteNode(0);
+console.log(linkedList.showList()); // [ 10, 2, 20, 5 ]
 linkedList.deleteNode(1);
 

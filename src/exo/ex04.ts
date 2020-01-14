@@ -1,40 +1,47 @@
 export class LinkedList {
     private head: LinkedListItem;
-    private size: number;
+    private index: number;
 
     constructor(item: LinkedListItem) {
         this.head = item;
-        this.head.index = this.size = 0;
+        this.index = 0;
     }
 
     appendToTail(value: number) {
         let currentItem: LinkedListItem = this.head;
-        let newItem = new LinkedListItem(value, this.head.index);
+        let newItem = new LinkedListItem(value);
         if (!currentItem) {
             this.head = newItem;
         } else {
-            while (true) {
-                if (currentItem.next) {
-                    currentItem = currentItem.next;
-                } else {
-                    currentItem.next = newItem;
-                    break;
-                }
-
+            while (currentItem.next) {
+                currentItem = currentItem.next;
             }
+            currentItem.next = newItem;
         }
+        this.index++;
 
     }
 
     deleteNode(index: number) {
         const currentItem = this.head;
-
-        if (!currentItem) {
-            return;
-        }
-        console.log(currentItem);
-        if (currentItem.value === index) {
-            this.head = currentItem.next;
+        if (index > 0 && index > this.index)
+            return -1;
+        else {
+            let current, preview, item = 0;
+            current = this.head;
+            preview = current;
+            if (index === 0) {
+                this.head = current.next;
+            } else {
+                while (item < index) {
+                    item++;
+                    preview = current;
+                    current = current.next;
+                }
+                preview.next = current.next;
+            }
+            this.index--;
+            return current.element;
         }
     }
 
@@ -59,16 +66,10 @@ export class LinkedList {
 
 export class LinkedListItem {
     value: any;
-    index: number;
     next: LinkedListItem | any;
 
-    constructor(value: any, index?: number) {
+    constructor(value: any) {
         this.value = value;
-        if (!index) {
-            this.index = 0;
-        } else {
-            this.index = index+1;
-        }
         this.next = null;
     }
 }
