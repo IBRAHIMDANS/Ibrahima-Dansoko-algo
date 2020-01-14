@@ -1,19 +1,54 @@
 {
   "name": "Ibrahima-Dansoko-algo",
   "version": "1.0.0",
-  "main": "src/index.js",
   "repository": "git@github.com:IBRAHIMDANS/Ibrahima-Dansoko-algo.git",
   "author": "ibrahima DANSOKO <ibrahima.dansoko@outlook.com>",
   "license": "MIT",
+  "types": "types.d.ts",
+  "main": "src/main.ts",
   "scripts": {
-    "start": "node src/index.js"
+    "test:static": "yarn tsc",
+    "test:unit": "yarn jest --config=.jestrc.js --maxWorkers 2 --detectOpenHandles --forceExit --coverage --no-cache ",
+    "test": "yarn test:static && yarn test:unit",
+    "lint": "yarn eslint src/*.ts* src/**/*.ts*",
+    "dev": "yarn nodemon",
+    "start": "ts-node src/main.ts"
   },
   "engines": {
     "node": ">=12.7.x",
     "npm": ">=6.13.4",
     "yarn": ">=1.19.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^13.1.6",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.7.4",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "@babel/runtime": "^7.7.7",
+    "ts-jest": "^24.2.0",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-typescript": "^7.7.7",
+    "@mhirba/eslint-config-base": "^1.4.2",
+    "@types/jest": "^24.0.20",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "babel-jest": "^24.9.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.20.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.16.4",
+    "prettier-eslint": "^9.0.0",
+    "supertest": "^4.0.2"
+  },
   "devDependencies": {
     "eslint": "^6.8.0"
   }
