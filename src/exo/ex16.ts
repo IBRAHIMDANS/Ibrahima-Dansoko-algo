@@ -25,12 +25,12 @@ export class Graph<T> {
         return [];
     }
 
-    public dump(): void {
+    public dump(): IterableIterator<T> {
         for (let key of Array.from(this.adjencies.keys())) {
             const values = this.adjencies.get(key);
-            // @ts-ignore
-            console.log(`${key} -> ${values.join(' ')}`);
+            // console.log(`${key} -> ${values.join(' ')}`);
         }
+        return this.adjencies.keys()
     }
 }
 

@@ -60,6 +60,12 @@ describe('Exo16', () => {
     g.addEdge(4, 8);
     g.addEdge(8, 42);
     g.dump();
+    console.log( g.dump());
+    g.removeNode(5);
+    g.removeEdge(1, 13);
+    g.removeEdge(8, 42);
+    console.log(`g.sort(<): ${g.sort((a: number, b: number): boolean => a < b)}`);
+    console.log( g.dump());
 
     test('Index', () => {
 
