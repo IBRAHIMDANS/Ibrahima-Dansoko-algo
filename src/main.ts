@@ -1,5 +1,6 @@
 import { MergeAndSort } from './exo/ex14';
 import { SortAnnagram } from './exo/ex15';
+import { Fibonacci } from './exo/ex12';
 
 // isUniquecharacters('ibrahima'); // false
 // isUniquecharacters('brams'); // true
@@ -38,10 +39,10 @@ import { SortAnnagram } from './exo/ex15';
 // queue.dequeue();
 // queue.dequeue();
 // console.log(queue.showQueue());
-// console.log(Fibonacci(8)); //[0, 1,  1,  2, 3, 5, 8, 13, 21]
+console.log(Fibonacci(16)); //[0, 1,  1,  2, 3, 5, 8, 13, 21]
 // console.log(Permut('AB')); // [ 'AB', 'BA' ]
 // console.log(MergeAndSort([1, -1, 2, 5, 8], [9, 0, 22, 35, 3])); //[-1, 0, 1,  2,  3,5, 8, 9, 22, 35]
-console.log(SortAnnagram(['ogd', 'dog', 'bac','abc', 'cab', 'man'])); //[ 'abc', 'bac', 'cab', 'dog', 'man', 'ogd' ]
+//console.log(SortAnnagram(['ogd', 'dog', 'bac','abc', 'cab', 'man'])); //[ 'abc', 'bac', 'cab', 'dog', 'man', 'ogd' ]
 
 
 

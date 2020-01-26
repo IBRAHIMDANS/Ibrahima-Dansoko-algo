@@ -19,7 +19,7 @@
     "npm": ">=6.13.4",
     "yarn": ">=1.19.x"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^13.1.6",
     "nodemon": "^2.0.2",
     "typescript": "^3.7.4",
@@ -38,7 +38,6 @@
     "@typescript-eslint/parser": "^2.7.0",
     "babel-jest": "^24.9.0",
     "chai": "^4.2.0",
-    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
@@ -46,9 +45,9 @@
     "eslint-plugin-prettier": "^3.0.1",
     "jest": "^24.9.0",
     "prettier": "^1.16.4",
-    "prettier-eslint": "^9.0.0"
-  },
-  "devDependencies": {
+    "prettier-eslint": "^9.0.0",
     "eslint": "^6.8.0"
+  },
+  "Dependencies": {
   }
 }

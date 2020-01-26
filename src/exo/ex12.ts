@@ -5,7 +5,11 @@
 // ex isUniquecharacters("gajhkjhef") == true isUniquecharacters("jhkjlk dfg")= false
 
 export function Fibonacci(number: number) {
-    if (number === 1) {
+    if (number < 0) {
+        return [-1];
+    } else  if (number === 0) {
+        return [0];
+    }else  if (number <= 1) {
         return [0, 1];
     } else {
         let fibonacci: number[] = Fibonacci(number - 1);

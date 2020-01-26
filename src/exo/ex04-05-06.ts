@@ -1,3 +1,12 @@
+export class LinkedListItem {
+    value: any;
+    next: LinkedListItem | any;
+
+    constructor(value: any) {
+        this.value = value;
+        this.next = null;
+    }
+}
 export class LinkedList {
     private head: LinkedListItem;
     private index: number;
@@ -102,12 +111,4 @@ export class LinkedList {
     }
 }
 
-export class LinkedListItem {
-    value: any;
-    next: LinkedListItem | any;
 
-    constructor(value: any) {
-        this.value = value;
-        this.next = null;
-    }
-}

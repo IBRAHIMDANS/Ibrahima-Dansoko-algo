@@ -14,7 +14,6 @@ export function anagrams(str1: string, str2: string) {
             return false;
         }
     }
-    console.log(true);
     return true
 }
 

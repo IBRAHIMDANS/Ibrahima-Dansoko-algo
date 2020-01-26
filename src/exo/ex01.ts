@@ -4,15 +4,13 @@
 // What if you can not use additional data structures?
 // ex isUniquecharacters("gajhkjhef") == true isUniquecharacters("jhkjlk dfg")= false
 
-export function isUniquecharacters(str: string) {
+export function isUniquecharacters(str: string):boolean {
     for (let i = 1; i < str.length; i++) {
         for (let j = 0; j < i; j++) {
             if (str.charAt(i) == str.charAt(j)) {
-                console.log(false);
                 return false;
             }
         }
     }
-    console.log(true);
     return true;
 }
