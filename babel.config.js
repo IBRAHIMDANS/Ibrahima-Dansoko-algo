@@ -5,6 +5,6 @@ module.exports = api => {
 
     return {
         presets,
-        plugins: [],
+        plugins: ["@babel/plugin-proposal-class-properties"],
     };
 };

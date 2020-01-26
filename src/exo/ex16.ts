@@ -1,5 +1,5 @@
-export default class Graph<T> {
-    private adjencies: Map<T, T[]> = new Map();
+export class Graph<T> {
+    adjencies: Map<T, T[]> = new Map();
 
     public addNode(value: T) {
         this.adjencies.set(value, []);
@@ -9,17 +9,17 @@ export default class Graph<T> {
         values.forEach((v: T) => this.addNode(v));
     }
 
-    public addEdge(origin: T, sibling: T): void {
+    public addEdge(origin?: T, sibling?: T): void {
 
-        // @ts-ignore
         this.adjencies.get(origin).push(sibling);
-        // @ts-ignore
         this.adjencies.get(sibling).push(origin);
     }
 
-    public removeNode(value: T) {}
+    public removeNode(value: T) {
+    }
 
-    public removeEdge(origin: T, sibling: T): void {}
+    public removeEdge(origin: T, sibling: T): void {
+    }
 
     public sort(callback: Function): T[] {
         return [];
@@ -29,7 +29,7 @@ export default class Graph<T> {
         for (let key of Array.from(this.adjencies.keys())) {
             const values = this.adjencies.get(key);
             // @ts-ignore
-            console.log(`${key} -> ${values.join(" ")}`);
+            console.log(`${key} -> ${values.join(' ')}`);
         }
     }
 }

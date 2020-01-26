@@ -11,10 +11,11 @@
     "allowJs": false,
     "noEmit": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
+    "strictNullChecks": false,
     "experimentalDecorators": true,
     "sourceMap": true,
     "outDir": "dist"
