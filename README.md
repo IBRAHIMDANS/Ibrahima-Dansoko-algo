@@ -1,7 +1,9 @@
 # Algo exam part .01 -- basics
-<a href ="https://www.google.com"> dfdv</a>
-## Guidelines
+<br>
+<a href ="https://gist.github.com/majdi/029cebc8a9f225761f3c19f90a5f5ca8"> Link Sujet</a>
+<br>
 
+## Guidelines
 All exercises **HAVE TO** be at the root of your repositories.<br />
 All exercises **MUST BE** done alone without any help (even in remote, respect the game)<br />
 All exercises **MUST BE** done without helpers function like includes for string or contains for array.<br />
